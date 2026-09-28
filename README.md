@@ -49,6 +49,9 @@ Share a single category with a customer by linking to its hash, for example
         for local testing.
 3. **Configure.** Put `apiKey` and `rootFolderId` in [`src/config.js`](src/config.js),
    along with your brand texts and contact channel (WhatsApp number or email).
+4. **Icon (optional).** Save a square PNG or SVG (512×512 or larger) as `assets/icon.png`.
+   It's used as the browser tab icon and next to the brand name in the header. To
+   use a different file name, change `brand.icon` in `config.js`.
 
 While either value is empty, the page runs in **demo mode** with sample data.
 

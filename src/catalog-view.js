@@ -28,6 +28,14 @@ export function createCatalogView(doc, { requestLinkFor }) {
     dom.footerEstablished.textContent = `Est. ${brand.established}`;
     dom.footerMotto.textContent = brand.motto;
     dom.footerCode.textContent = brand.code;
+    if (brand.icon) renderIcon(brand.icon);
+  }
+
+  function renderIcon(src) {
+    dom.favicon.href = src;
+    dom.touchIcon.href = src;
+    dom.brandIcon.addEventListener('load', () => (dom.brandIcon.hidden = false), { once: true });
+    dom.brandIcon.src = src;
   }
 
   function renderContactLink(href) {
@@ -141,6 +149,9 @@ function queryElements(doc) {
   };
 
   return {
+    favicon: find('favicon'),
+    touchIcon: find('touch-icon'),
+    brandIcon: find('brand-icon'),
     brandName: find('brand-name'),
     brandTagline: find('brand-tagline'),
     contactLink: find('contact-link'),

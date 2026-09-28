@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" data-favicon>
+  <link rel="apple-touch-icon" data-touch-icon>
   <script type="module" src="src/main.js"></script>
 </head>
 <body>
@@ -17,8 +19,11 @@
 
     <header class="site-header container">
       <a class="logo" href="#todos">
-        <span class="logo__name" data-brand-name></span>
-        <span class="logo__tagline eyebrow" data-brand-tagline></span>
+        <img class="logo__icon" alt="" hidden data-brand-icon>
+        <span class="logo__text">
+          <span class="logo__name" data-brand-name></span>
+          <span class="logo__tagline eyebrow" data-brand-tagline></span>
+        </span>
       </a>
       <nav class="site-nav" aria-label="Principal">
         <a class="site-nav__link eyebrow" href="#catalogo" aria-current="page">Catálogo</a>

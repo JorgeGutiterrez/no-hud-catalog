@@ -9,6 +9,9 @@ export const config = Object.freeze({
     motto: 'Ropa para un mundo más real',
     established: '2024',
     code: 'NH_01',
+    // Square PNG or SVG (512×512 or larger). Used as the browser tab icon and header logo.
+    // Leave empty to show no icon.
+    icon: 'assets/icon.png',
   },
 
   hero: {
