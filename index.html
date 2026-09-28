@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Catálogo de diseños">
+  <title>Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="src/main.js"></script>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__planet" aria-hidden="true"></div>
+
+    <header class="site-header container">
+      <a class="logo" href="#todos">
+        <span class="logo__name" data-brand-name></span>
+        <span class="logo__tagline eyebrow" data-brand-tagline></span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a class="site-nav__link eyebrow" href="#catalogo" aria-current="page">Catálogo</a>
+        <a class="site-nav__link eyebrow" target="_blank" rel="noopener" data-contact-link>Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero container">
+      <div class="hero__intro">
+        <h1 class="hero__title" data-hero-title></h1>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="hero__subtitle eyebrow" data-hero-subtitle></p>
+      </div>
+      <nav class="category-index" aria-label="Categorías">
+        <ul class="category-index__list" data-category-index></ul>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="pips" aria-hidden="true"></span>
+      </nav>
+    </section>
+  </div>
+
+  <main class="catalog container" id="catalogo">
+    <p class="notice" data-notice hidden></p>
+
+    <div class="toolbar">
+      <nav class="filters" aria-label="Filtrar por categoría" data-filters></nav>
+      <p class="toolbar__count eyebrow">
+        <span data-count>00</span>
+        <span class="rule" aria-hidden="true"></span>
+      </p>
+    </div>
+
+    <p class="status" role="status" aria-live="polite" data-status hidden></p>
+    <ul class="grid" data-grid></ul>
+  </main>
+
+  <footer class="site-footer container">
+    <p class="site-footer__established eyebrow" data-footer-established></p>
+    <p class="site-footer__motto eyebrow" data-footer-motto></p>
+    <p class="site-footer__code" data-footer-code></p>
+  </footer>
+
+  <dialog class="lightbox" aria-labelledby="lightbox-title" data-lightbox>
+    <div class="lightbox__content">
+      <div class="lightbox__stage portal">
+        <img class="lightbox__image" alt="" referrerpolicy="no-referrer" data-lightbox-image>
+      </div>
+      <div class="lightbox__body">
+        <p class="eyebrow lightbox__category" data-lightbox-category></p>
+        <h2 class="lightbox__title" id="lightbox-title" data-lightbox-title></h2>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="lightbox__description" data-lightbox-description></p>
+        <a class="button" target="_blank" rel="noopener" data-lightbox-request>Solicitar este diseño</a>
+      </div>
+      <button class="lightbox__close" type="button" aria-label="Cerrar" autofocus data-lightbox-close>✕</button>
+    </div>
+  </dialog>
+
+  <template data-card-template>
+    <li class="card">
+      <button class="card__button portal" type="button" data-card-button>
+        <img class="card__image" loading="lazy" referrerpolicy="no-referrer" alt="" data-card-image>
+        <span class="pips card__pips" aria-hidden="true"></span>
+        <span class="card__meta">
+          <span class="card__number" data-card-number></span>
+          <span class="card__title eyebrow" data-card-title></span>
+        </span>
+      </button>
+    </li>
+  </template>
+</body>
+</html>
