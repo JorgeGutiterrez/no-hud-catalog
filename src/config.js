@@ -36,7 +36,7 @@ export const config = Object.freeze({
 
   contact: {
     channel: 'whatsapp', // 'whatsapp' | 'email'
-    whatsappNumber: '9994561434', // International format, digits only.
+    whatsappNumber: '+529994561434', // International format, digits only.
     email: 'hola@nohud.com',
     emailSubject: 'Consulta de diseño',
     greeting: '¡Hola! Quiero información sobre sus diseños.',
